@@ -46,7 +46,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1158px) {
     .container{
         width: 1158px;
         padding-left: 15px;
@@ -75,7 +75,6 @@ body {
 }
 
 .logo {
-    font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
@@ -96,13 +95,12 @@ body {
 .burger-btn{
         padding: 0;
         border:none;
-        /* height: 24px; */
         background-color: transparent;
 }
 
 .burger-icon{
         display: block;
-        fill:#2f2f37;
+        stroke:#2f2f37;
         height: 24px;
 }
 
@@ -111,21 +109,38 @@ body {
     .burger-btn{
         display: none;
 }
-.menu-list{
-    display: flex;
-    align-items: center;
-    gap: 40px;
+
+.nav{
+  display: flex;
+  align-items: center;
 }
 .header-logo{
-    display: block;
-    padding: 24px 0;
-    margin-right: 120px;
+  display: block;
+  padding: 24px 0;
+  margin-right: 120px;
 }
 
+.menu-list{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+
+.link-text {
+  padding: 24px 0;
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
 .active-link{
-    position: relative;
+  position: relative;
 }
-
 
 .active-link::after{
 content: '';
@@ -139,18 +154,20 @@ left: 0;
 bottom: -1px;
 }
 
-.link-text {
-    padding: 24px 0;
-    display: block;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+.contacts-list{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
+.address-link {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #434455; 
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .link-text:hover,
 .link-text:focus,
 .active-link
@@ -164,24 +181,10 @@ bottom: -1px;
     display: block;
 
 }
-.contacts-list{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-.address-link {
-    display: block;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: #434455; 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.nav{
-    display: flex;
-    align-items: center;
-}
+
+
+
 }
 
 @media screen and (min-width: 1158px) {
@@ -345,48 +348,39 @@ bottom: -1px;
 
 /* --MAIN-SECTION-- */
 
-
 .main-section {
   background-color: #2e2f42;
-  padding: 188px 0;
   background-image: linear-gradient(
-  rgba(46, 47, 66, 0.7), 
-  rgba(46, 47, 66, 0.7)),
-   url(../images/mobile/people-office-mob.jpg);
+    rgba(46, 47, 66, 0.7), 
+    rgba(46, 47, 66, 0.7)
+  ), url(../images/mobile/people-office-mob.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1440px;
-  margin: 0 auto;
-  background-position:center ;
-
+  height: 432px;
+  padding: 72px 0;
+  background-position: center;
 }
+
 @media screen and (min-resolution: 2x) {
-  .main-section{
+  .main-section {
     background-image: linear-gradient(
       rgba(46, 47, 66, 0.7), 
-      rgba(46, 47, 66, 0.7)),
-       url(../images/mobile/people-office-mob-2x.jpg);
-
+      rgba(46, 47, 66, 0.7)
+    ), url(../images/mobile/people-office-mob-2x.jpg);
   }
-  
 }
-
 
 
 .main-title {
-max-width: 216px;
-font-weight: 700;
-font-size: 36px;
-line-height: 1.1;
-letter-spacing: 0.02em;
-text-align: center;
-color: #fff;
-margin: 0 auto;
-margin-bottom: 72px;
-}
-
-h1 {
-  color: #FFFFFF;
+  max-width: 216px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  padding-bottom: 72px;
 }
 
 .button {
@@ -395,7 +389,6 @@ h1 {
   min-width: 169px;
   height: 56px;
   background-color: #4D5AE5;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -404,75 +397,70 @@ h1 {
   cursor: pointer;
   border-radius: 4px;
   border: none;
-  transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  
 }
 
-.button:hover {
-  background-color: #404BBF;
-}
-
-.button:focus {
+.button:hover, .button:focus {
   background-color: #404BBF;
 }
 
 
 @media screen and (min-width: 768px) {
-  .main-title{
+  .main-title {
     max-width: 496px;
-    margin-bottom: 36px;
+    padding-bottom: 36px;
     font-size: 56px;
   }
-  .main-section{
+  .main-section {
     background-image: linear-gradient(
       rgba(46, 47, 66, 0.7), 
-      rgba(46, 47, 66, 0.7)),
-       url(../images/tablet/people-office-tab.jpg);
-       
-      }
-
-  
-}
-
-@media screen and (min-resolution: 2x) {
-  .main-section{
-    background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7), 
-      rgba(46, 47, 66, 0.7)),
-       url(../images/tablet/people-office-tab-2x.jpg);
-    
+      rgba(46, 47, 66, 0.7)
+    ), url(../images/tablet/people-office-tab.jpg);
+    padding: 112px 0;
+    width: 100%;
   }
   
+  @media screen and (min-resolution: 2x) {
+    .main-section {
+      background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7), 
+        rgba(46, 47, 66, 0.7)
+      ), url(../images/tablet/people-office-tab-2x.jpg);
+    }
+  }
 }
 
 
 @media screen and (min-width: 1158px) {
-  .main-title{
-    margin-bottom: 48px;
+  .main-title {
+    padding-bottom: 48px;
   }
-  .main-section{
+  .main-section {
+    height: 600px;
+    padding: 188px 0;
     background-image: linear-gradient(
       rgba(46, 47, 66, 0.7), 
-      rgba(46, 47, 66, 0.7)),
-       url(../images/desk/people-office-2x.jpg);
+      rgba(46, 47, 66, 0.7)
+    ), url(../images/desk/people-office.jpg);
   }
   
-}
-
-@media screen and (min-resolution: 2x) {
-  .main-section{
-    background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7), 
-      rgba(46, 47, 66, 0.7)),
-       url(../images/people-office-mob-2x.jpg);
-    
+  @media screen and (min-resolution: 2x) {
+    .main-section {
+      background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7), 
+        rgba(46, 47, 66, 0.7)
+      ), url(../images/desk/people-office-2x.jpg);
+    }
   }
-  
 }
 
 
 /* --SECOND-SECTION-- */
+
+.section-title{
+  padding: 96px 0;
+}
 
 .visually-hidden {
   position: absolute;
@@ -487,18 +475,6 @@ h1 {
   overflow: hidden;
 }
 
-
-
-
-.icon-section-title{
-  display:none;
-}
-
-.section-title{
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-
 .card-title {
   margin: 0 auto;
   font-weight: 700;
@@ -511,7 +487,6 @@ h1 {
   text-align: center;
   
 }
-
 .fuatures-list{
   display: flex;
   flex-direction: column;
@@ -519,11 +494,15 @@ h1 {
   gap: 72px;
 }
 
+.icon-section-title{
+  display:none;
+}
+
 .description-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.019em;
   color: #434455;
 }
 
@@ -543,6 +522,18 @@ h1 {
 
 @media screen and (min-width: 1158px) {
   
+.section-title{
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .fuatures-list{
+    display: flex;
+    flex-direction: row;
+  }
+  .fuatures-items{
+    width: calc((100% - 72px) / 4);
+  }
 
 .icon-section-title{
   display: flex;
@@ -555,37 +546,23 @@ h1 {
   margin-bottom: 8px;
 }
 
-.section-title{
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
+
 
 .card-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  text-align: start;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
 }
-
-.fuatures-list{
-  display: flex;
-  flex-direction: row;
-}
-
-.fuatures-items{
-  width: calc((100% - 72px) / 3);
-}
-
 .description-text {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-}.main-title{
-    margin-bottom: 48px;
-   
-  }
+  font-weight: 400;
+ 
+ 
+}
 
-  
 }
 
 
@@ -619,18 +596,17 @@ width: 264px;
   
  
 }
-
+/* ВИПРАВИТИ  */
 .list-item {
   box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08),
    0px 1px 1px rgba(46, 47, 66, 0.16), 
    0px 2px 1px rgba(46, 47, 66, 0.08); 
   background-color: #FFFFFF;
-  width: calc((100% - 72px) / 4); 
   border-radius: 0 0 4px 4px; 
-  width: 264px;
+  
 }
 
-/* попробуєш забрати width */
+
 
 .profile-container {
   padding: 32px 0;
@@ -698,6 +674,9 @@ transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     row-gap: 64px;
     justify-content: center;
 
+  }
+  .list-item {
+    max-width: calc((100% - 24px)/ 2);
   }
 }
 
