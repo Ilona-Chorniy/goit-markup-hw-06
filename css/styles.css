@@ -834,18 +834,20 @@ footer {
 
 .footer-info{
   display: flex;
-  flex-wrap: wrap;
-  gap: 72px;
-  /* justify-content: center; */
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* gap: 72px; */
+  justify-content: center;
   
 }
 
-.footer-container{
+/* .footer-container{
   padding: 0 16px;
-}
+} */
 
 .footer-social{
-  padding: 0 56px;
+  /* padding: 0 56px; */
+  margin-bottom: 72px;
 }
 
 
@@ -857,6 +859,7 @@ footer {
   color: #FFFFFF;
   margin-bottom: 16px;
   font-size: 16px;
+  
 }
 
 
@@ -903,11 +906,13 @@ span {
   letter-spacing: 0.02em;
   width: 264px;
   text-align: start;
+  margin-bottom: 72px;
 }
 .footer-logo {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 17.5px;
   text-align: center;
+  
 }
 .web-studio_text {
   color: #f4f4fd;
@@ -934,6 +939,7 @@ span {
       letter-spacing: 0.04em;
       padding-left: 16px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      opacity: 0.3;
 
 }
 .footer-btn {
@@ -966,20 +972,36 @@ span {
 
 
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {  
+      .footer{
+      padding: 96px 0 96px 108px;
+      }
+
+
     .footer-info {
       display: flex;
-      gap: 24px;
-      row-gap: 72px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      /* gap: 24px;
+      row-gap: 72px; */
       align-items: flex-start;
-    }
-    .footer-container{
-      padding-left: 108px;
+      justify-content: flex-start;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 768px;
+
+      /* gap: 0 24px; */
     }
 
-    .footer-social{
-      padding: 0;
+    
+    .footer-container{
+      margin-right: 24px;
+      /* margin-left: 108px; */
     }
+
+    /* .footer-social{
+      padding: 0;
+    } */
 
     .footer-logo {
       display: flex;
@@ -990,7 +1012,7 @@ span {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-left: 108px;
+      /* margin-left: 108px; */
     }
   
     .social-description {
@@ -1005,7 +1027,7 @@ span {
     .social-form {
       display: flex;
       flex-direction: row;
-      gap: 24px;
+      /* gap: 24px; */
     }
   
     .footer-input {
@@ -1033,14 +1055,27 @@ span {
     display: flex;
      align-items: baseline;
      flex-wrap: nowrap;
+     justify-content: flex-end;
      gap: 0;
+     width: 100%;
+     max-width: 1158px;
    
+ }
+
+ .footer-container{
+  margin-left: 156px;
+  margin-right: 120px;
  }
  .social-footer {
   margin-left: 80px;
 }
+
+.footer-description {
+  max-width: 264px;
+  margin-bottom: 0;
+}
 .footer-social{
-  margin-left: 120px;
+  margin-bottom: 0;
 }
  
 
@@ -1049,10 +1084,35 @@ span {
   flex-wrap: nowrap;
   
 }
- 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --MODAL-WINDOWS-- */
+
 
 .backdrop{
   width: 100%;
