@@ -1086,31 +1086,6 @@ span {
 }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* --MODAL-WINDOWS-- */
 
 
@@ -1138,7 +1113,9 @@ span {
     min-height: 584px;
     background-color: #fcfcfc;
     border-radius: 4px;
-    position: absolute;
+    position: fixed;
+/* я виправила з position: абсолют  */
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1253,6 +1230,7 @@ span {
 }
 
 .modal-textarea{
+  display: block;
   width: 100%;
   height: 120px;
   font-size: 12px;
